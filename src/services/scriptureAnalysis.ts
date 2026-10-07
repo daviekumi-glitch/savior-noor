@@ -5,6 +5,7 @@ import { quranApi } from './quranApi';
 import { bibleApi } from './bibleApi';
 
 export interface AnalysisResult {
+  id?: string;
   question: string;
   answer: 'yes' | 'no' | 'unclear';
   confidence: 'high' | 'medium' | 'low';
@@ -13,6 +14,8 @@ export interface AnalysisResult {
   bibleEvidence: BibleEvidence[];
   summary: string;
   methodology: string;
+  createdAt?: string;
+  isBookmarked?: boolean;
 }
 
 export interface QuranEvidence {
